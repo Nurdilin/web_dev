@@ -1,12 +1,13 @@
-#!/bin/bas
-mv bashrc ~/.bashrc
-mv inedit_secrets ~/.inedit_secrets
-source ~/.bashrc
+#!/bin/bash
+
+
+sudo su -
+cp bashrc /root/.bashrc
+cp inedit_secrets /root/.inedit_secrets
+#remember to add to user's bashrc the sudo su - command
+source /root/.bashrc
 
 touch setup_env.log
-
-#become root
-sudo su -
 
 # Will automatically update
 yum -y update
@@ -18,7 +19,7 @@ yum -y install telnet
 
 
 ######################git installations#################
-git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+git clone https://github.com/magicmonty/bash-git-prompt.git /root/.bash-git-prompt --depth=1
 
 
 

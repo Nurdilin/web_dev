@@ -1,0 +1,4 @@
+Module wsgi
+https://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html
+Add LoadModule wsgi_module modules/mod_wsgi.so line in /etc/httpd/conf.modules.d/00-base.conf
+

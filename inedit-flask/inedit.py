@@ -1,7 +1,8 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route('/flask_test')
+#We then use the route() decorator to tell Flask what URL should trigger our function.
+@app.route('/hello')
 def hello_world():
   return 'Hello from Flask!'
 
