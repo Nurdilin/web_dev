@@ -1,10 +1,13 @@
 from flask import Flask
+from flask import render_template
+
 app = Flask(__name__)
 
-#We then use the route() decorator to tell Flask what URL should trigger our function.
-@app.route('/hello')
-def hello_world():
-  return 'Hello from Flask!'
+"""
+We then use the route() decorator to tell Flask what URL should trigger our function.
+"""
 
-if __name__ == '__main__':
-  app.run()
+@app.route('/')
+def hello_world():
+  return 'Fanis'
+
