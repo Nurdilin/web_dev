@@ -2,3 +2,17 @@ Module wsgi
 https://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html
 Add LoadModule wsgi_module modules/mod_wsgi.so line in /etc/httpd/conf.modules.d/00-base.conf
 
+run flask app example.
+rememebr to add o+x to all folder structure
+it worked
+https://www.datasciencebytes.com/bytes/2015/02/24/running-a-flask-app-on-aws-ec2/
+
+Deploy Python Flask in elastic beanstalk environment
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
+
+Deploying a Django Application to Elastic Beanstalk
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html
+
+he tutorial uses the EB CLI as a deployment mechanism,
+ but you can also use the AWS Management Console to deploy a ZIP file containing your project's contents. 
+The EB CLI is an interactive command line interface written in Python that uses the Python SDK for AWS (boto).
