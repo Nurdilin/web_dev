@@ -42,6 +42,8 @@ source ~/.bash-git-prompt/gitprompt.sh
 
 alias ll='ls -l'
 alias grep='grep --color=auto'
+alias cd='cd -P'
+alias dc='cd'
 
 PS1='\u@\h:\w$ \[\033]0;\h \w\007\]'
 PS1="$BACK $GREEN $RESET $WHITE inEdit $RESET[\u@\h \W]$"
