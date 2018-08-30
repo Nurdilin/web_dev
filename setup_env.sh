@@ -1,10 +1,10 @@
 #!/bin/bash
-
+#in order to connect as root every time
+echo "sudo su -" >> /home/$(whoami)/.bashrc
 
 sudo su -
 cp bashrc /root/.bashrc
 cp inedit_secrets /root/.inedit_secrets
-#remember to add to user's bashrc the sudo su - command
 source /root/.bashrc
 
 touch setup_env.log
@@ -20,8 +20,7 @@ yum -y install telnet
 
 ######################git installations#################
 git clone https://github.com/magicmonty/bash-git-prompt.git /root/.bash-git-prompt --depth=1
-
-
+git clone git@github.com:Nurdilin/scripts-utilities.git
 
 
 ####################APACHE#############################
@@ -44,6 +43,7 @@ pip install pymysql
 pip install mysql-connector
 pip install virtualenv
 pip install Flask
+pip install flask-mysql
 
 echo "pip version $(pip --version)" >> setup.log
 
@@ -56,9 +56,11 @@ yum -y install mysql-server
 echo "mySql version $(mysql --version)" >> setup.log
 
 ######################ENV SET UP#####################
-ln -sfn /var/www/html /root/apache_f
-ln -sfn /etc/httpd/conf.d/ /root/apache_c
-
+ln -sfn /var/www/html /root/files_apache
+ln -sfn /etc/httpd/conf.d/ /root/conf_apache
+ln -sfn /var/log/httpd/ /root/logs_apache
+ln -sfn /root/inedit-flask /var/www/html/inedit-flask
+ln -sfn /root/web_dev/inedit-flask/ /root/inedit-flask
 
 
 
